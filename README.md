@@ -1,10 +1,5 @@
 # Tesla-Stock-Price-Prediction
 
-
-<a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/georgemuriithi/tesla-stock-price-pred.svg?color=blue&cachedrop">
-</a>
-
 Tesla’s stock price is predicted over some months using an LSTM (Long Short-Term Memory) model. Tweets about Tesla are used to improve prediction accuracy.
 
 First, the stock price is predicted over some months using an **LSTM Multivariate Time-Series Prediction** model. Then, tweets about Tesla are cleaned and their daily average sentiment scores are computed using **TextBlob.** Lastly, the daily average sentiment scores are added as a feature in the LSTM model and used for prediction.

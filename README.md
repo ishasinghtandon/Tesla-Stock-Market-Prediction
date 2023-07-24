@@ -74,12 +74,6 @@ They are then **lemmatized**, and a **frequency analysis** is conducted on the w
 
 **Sentiment scores** for the tweets are calculated using **TextBlob.** The polarity range is [-1.0, 1.0], with -1.0 as the most negative polarity and 1.0 as the most positive. 0.0 is neutral polarity. Then, a **frequency analysis** is conducted on the sentiment scores. Lastly, the **daily average sentiment scores** are computed.
 
-### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/4-TSLA-Stock-Price-Prediction-With-Sentiment-Scores.ipynb">Prediction With Sentiment Scores</a>
-<a href="https://colab.research.google.com/drive/1w1OSOoh5ab2jB8S6Devm-o7zDMaXnMnj?usp=sharing">
-    <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
-</a>
-
-Finally, the daily average sentiment scores are added as a feature to our LSTM model.
 
 LSTM model **parameters:**
 
@@ -88,20 +82,6 @@ LSTM model **parameters:**
 - `optimizer=Adam`
 - `loss_function=MSELoss()`
 
-LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search Algorithm:
-
-- `hidden_size=5`
-- `num_layers=1`
-- `learning_rate=0.002`
-- `num_epochs=8000`
-
-***GPU** is leveraged.*
-
-**MSE (Mean Squared Error)** results:
-
-- Training and Validation: **35.028627722561374**
-- Training: **0.11838243676105603**
-- Validation: **138.12294583219045**
 
 ## Conclusion
 From the MSE results of Prediction Without and With Sentiment Scores, it is clear that adding the daily average sentiment scores of tweets as a feature to the LSTM model improves its prediction accuracy. This means that tweets about Tesla have a level of impact on its stock price.
